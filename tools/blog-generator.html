@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RemovExif Blog Generator</title>
+    <style>
+      :root {
+        color-scheme: light;
+        font-family: "Inter", "Segoe UI", system-ui, -apple-system, BlinkMacSystemFont,
+          sans-serif;
+      }
+
+      body {
+        margin: 0;
+        padding: 2rem;
+        background: #f7f7fb;
+        color: #111;
+      }
+
+      .container {
+        max-width: 1100px;
+        margin: 0 auto 4rem;
+        background: #fff;
+        border-radius: 24px;
+        box-shadow: 0 25px 80px rgba(15, 23, 42, 0.12);
+        padding: 2.5rem;
+        border: 3px solid #111;
+      }
+
+      h1 {
+        margin-top: 0;
+        font-size: clamp(1.8rem, 3vw, 2.5rem);
+      }
+
+      h2 {
+        margin-top: 2.5rem;
+        font-size: 1.3rem;
+      }
+
+      label {
+        font-weight: 600;
+        margin-bottom: 0.4rem;
+        display: inline-block;
+      }
+
+      input,
+      textarea,
+      select {
+        width: 100%;
+        padding: 0.85rem 1rem;
+        border-radius: 14px;
+        border: 2px solid #000;
+        font-size: 0.95rem;
+        transition: border-color 0.2s ease;
+        background: #fafafa;
+      }
+
+      textarea {
+        min-height: 160px;
+        resize: vertical;
+      }
+
+      input:focus,
+      textarea:focus,
+      select:focus {
+        outline: none;
+        border-color: #ff6b00;
+        box-shadow: 0 0 0 3px rgba(255, 107, 0, 0.2);
+      }
+
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        gap: 1.25rem;
+      }
+
+      .card {
+        border: 2px dashed #999;
+        border-radius: 20px;
+        padding: 1.5rem;
+        background: #fcfcff;
+      }
+
+      .locale-card {
+        border: 2px solid #111;
+        margin-bottom: 1.25rem;
+        background: #fffaf2;
+      }
+
+      .buttons {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+        margin-top: 1.5rem;
+      }
+
+      button {
+        border: none;
+        border-radius: 14px;
+        padding: 0.9rem 1.4rem;
+        font-size: 1rem;
+        font-weight: 600;
+        cursor: pointer;
+        box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+        border: 2px solid #111;
+      }
+
+      button.primary {
+        background: linear-gradient(120deg, #ffb347, #ff6b00);
+        color: #111;
+      }
+
+      button.secondary {
+        background: #fff;
+      }
+
+      button.copy {
+        margin-top: 0.75rem;
+        width: auto;
+        padding: 0.4rem 0.9rem;
+        font-size: 0.85rem;
+      }
+
+      .output {
+        margin-top: 2rem;
+      }
+
+      details {
+        border: 2px solid #111;
+        border-radius: 18px;
+        margin-bottom: 1rem;
+        background: #fdfcf9;
+      }
+
+      summary {
+        padding: 1rem 1.25rem;
+        cursor: pointer;
+        font-weight: 600;
+      }
+
+      details > div {
+        padding: 1rem 1.25rem 1.5rem;
+      }
+
+      .chip {
+        display: inline-block;
+        padding: 0.2rem 0.6rem;
+        border-radius: 999px;
+        background: #111;
+        color: #fff;
+        font-size: 0.75rem;
+        margin-left: 0.75rem;
+      }
+
+      .hint {
+        font-size: 0.85rem;
+        color: #555;
+        margin-top: 0.3rem;
+      }
+
+      .success {
+        color: #0a7d32;
+        font-weight: 600;
+      }
+
+      @media (max-width: 720px) {
+        body {
+          padding: 1rem;
+        }
+
+        .container {
+          padding: 1.5rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>RemovExif Blog Multi-Locale Generator</h1>
+      <p>
+        粘贴一份 Markdown，设置元信息，点击生成即可得到 8 种语言的文件骨架，直接复制到
+        <code>src/content/posts/&lt;locale&gt;/&lt;slug&gt;.md</code>。
+      </p>
+
+      <section>
+        <h2>Step 1 · 全局元信息</h2>
+        <div class="grid">
+          <div>
+            <label for="slug">Slug（英文短链）</label>
+            <input
+              id="slug"
+              type="text"
+              placeholder="例如 remove-camera-serial-number-metadata"
+            />
+            <p class="hint">用于文件名和 URL，自动转小写短横线</p>
+          </div>
+          <div>
+            <label for="date">发布日期</label>
+            <input id="date" type="date" />
+            <p class="hint">默认填入今天，可改为任何固定日期</p>
+          </div>
+          <div>
+            <label for="cover">封面图路径</label>
+            <input id="cover" type="text" placeholder="/images/blog/xxx.jpg" />
+            <p class="hint">相对路径，放在 public/images/blog 下</p>
+          </div>
+          <div>
+            <label for="author">作者</label>
+            <input id="author" type="text" value="RemovExif Team" />
+          </div>
+          <div>
+            <label for="tags">标签（逗号分隔）</label>
+            <input id="tags" type="text" placeholder="exif, privacy, tutorial" />
+            <p class="hint">会自动转换为 YAML 列表</p>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h2>Step 2 · 基础内容（自动复制到每种语言，可再自行微调）</h2>
+        <div class="card">
+          <label for="baseTitle">标题</label>
+          <input id="baseTitle" type="text" placeholder="How to remove EXIF..." />
+
+          <label for="baseDescription" style="margin-top: 1rem">描述</label>
+          <textarea id="baseDescription" placeholder="150 字以内摘要"></textarea>
+
+          <label for="baseContent" style="margin-top: 1rem">Markdown 正文</label>
+          <textarea
+            id="baseContent"
+            placeholder="在这里粘贴 Markdown，包含 frontmatter 下方的正文即可"
+          ></textarea>
+
+          <button class="secondary" id="copyBase" style="margin-top: 1rem">
+            将上面内容复制到所有语言
+          </button>
+        </div>
+      </section>
+
+      <section>
+        <h2>Step 3 · 按语言微调（可留空，默认使用基础内容）</h2>
+        <div id="localeSections"></div>
+      </section>
+
+      <div class="buttons">
+        <button class="primary" id="generateBtn">生成 Markdown 文件</button>
+        <button class="secondary" id="resetBtn">清空输出</button>
+      </div>
+
+      <section class="output">
+        <h2>生成结果</h2>
+        <div id="output"></div>
+      </section>
+    </div>
+
+    <template id="localeTemplate">
+      <div class="card locale-card">
+        <h3>
+          <span data-slot="name"></span>
+          <span class="chip" data-slot="code"></span>
+        </h3>
+        <label>标题</label>
+        <input data-slot="title" type="text" />
+        <label style="margin-top: 0.8rem">描述</label>
+        <textarea data-slot="description"></textarea>
+        <label style="margin-top: 0.8rem">Markdown 正文</label>
+        <textarea data-slot="content"></textarea>
+      </div>
+    </template>
+
+    <script>
+      const locales = [
+        { code: "en", name: "English" },
+        { code: "es", name: "Español" },
+        { code: "pt", name: "Português" },
+        { code: "de", name: "Deutsch" },
+        { code: "fr", name: "Français" },
+        { code: "ja", name: "日本語" },
+        { code: "zh-CN", name: "简体中文" },
+        { code: "zh-TW", name: "繁體中文" },
+      ];
+
+      const slugInput = document.getElementById("slug");
+      const dateInput = document.getElementById("date");
+      const coverInput = document.getElementById("cover");
+      const authorInput = document.getElementById("author");
+      const tagsInput = document.getElementById("tags");
+      const baseTitleInput = document.getElementById("baseTitle");
+      const baseDescriptionInput = document.getElementById("baseDescription");
+      const baseContentInput = document.getElementById("baseContent");
+      const localeSections = document.getElementById("localeSections");
+      const outputContainer = document.getElementById("output");
+      const copyBaseBtn = document.getElementById("copyBase");
+      const generateBtn = document.getElementById("generateBtn");
+      const resetBtn = document.getElementById("resetBtn");
+
+      const localeFieldMap = new Map();
+
+      const today = new Date().toISOString().split("T")[0];
+      dateInput.value = today;
+
+      function slugify(value) {
+        return value
+          .toLowerCase()
+          .replace(/[^a-z0-9]+/g, "-")
+          .replace(/(^-|-$)/g, "");
+      }
+
+      slugInput.addEventListener("blur", () => {
+        slugInput.value = slugify(slugInput.value.trim());
+      });
+
+      function yamlEscape(value) {
+        if (!value) return '""';
+        if (/[:\[\]\{\},&*#?|\-<>=!%@`]/.test(value) || /\s{2,}/.test(value) || value.includes('"')) {
+          return JSON.stringify(value);
+        }
+        return value;
+      }
+
+      function getTags() {
+        return tagsInput.value
+          .split(",")
+          .map((tag) => tag.trim())
+          .filter(Boolean);
+      }
+
+      function createLocaleSections() {
+        localeSections.innerHTML = "";
+        locales.forEach((locale) => {
+          const template = document.getElementById("localeTemplate");
+          const clone = template.content.cloneNode(true);
+
+          const card = clone.querySelector(".locale-card");
+          const nameSlot = clone.querySelector('[data-slot="name"]');
+          const codeSlot = clone.querySelector('[data-slot="code"]');
+          const titleField = clone.querySelector('[data-slot="title"]');
+          const descField = clone.querySelector('[data-slot="description"]');
+          const contentField = clone.querySelector('[data-slot="content"]');
+
+          nameSlot.textContent = locale.name;
+          codeSlot.textContent = locale.code;
+
+          localeSections.appendChild(clone);
+          localeFieldMap.set(locale.code, {
+            titleField,
+            descField,
+            contentField,
+          });
+        });
+      }
+
+      function copyBaseToLocales() {
+        const title = baseTitleInput.value.trim();
+        const description = baseDescriptionInput.value.trim();
+        const content = baseContentInput.value.trim();
+
+        localeFieldMap.forEach(({ titleField, descField, contentField }) => {
+          if (!titleField.value.trim()) titleField.value = title;
+          if (!descField.value.trim()) descField.value = description;
+          if (!contentField.value.trim()) contentField.value = content;
+        });
+      }
+
+      function buildFrontMatter({ title, description, date, author, cover, tags, locale }) {
+        const lines = [
+          "---",
+          `title: ${yamlEscape(title)}`,
+          `description: ${yamlEscape(description)}`,
+          `date: ${date}`,
+          `author: ${yamlEscape(author)}`,
+          cover ? `coverImage: ${cover}` : "",
+          tags.length ? "tags:\n" + tags.map((tag) => `  - ${tag}`).join("\n") : "",
+          `locale: ${locale}`,
+          "---",
+        ].filter(Boolean);
+
+        return lines.join("\n");
+      }
+
+      function generateFiles() {
+        const slug = slugify(slugInput.value.trim());
+        if (!slug) {
+          alert("请先填写 slug");
+          slugInput.focus();
+          return;
+        }
+
+        const date = dateInput.value || today;
+        const author = authorInput.value.trim() || "RemovExif Team";
+        const cover = coverInput.value.trim();
+        const tags = getTags();
+
+        const baseTitle = baseTitleInput.value.trim();
+        const baseDescription = baseDescriptionInput.value.trim();
+        const baseContent = baseContentInput.value.trim();
+
+        if (!baseTitle || !baseDescription || !baseContent) {
+          alert("基础标题/描述/正文不能为空");
+          return;
+        }
+
+        outputContainer.innerHTML = "";
+
+        locales.forEach((locale) => {
+          const fields = localeFieldMap.get(locale.code);
+          const title = fields.titleField.value.trim() || baseTitle;
+          const description = fields.descField.value.trim() || baseDescription;
+          const content = fields.contentField.value.trim() || baseContent;
+
+          const frontMatter = buildFrontMatter({
+            title,
+            description,
+            date,
+            author,
+            cover,
+            tags,
+            locale: locale.code,
+          });
+
+          const fileContent = `${frontMatter}\n${content}\n`;
+          const fileName = `src/content/posts/${locale.code}/${slug}.md`;
+
+          const details = document.createElement("details");
+          details.open = true;
+
+          const summary = document.createElement("summary");
+          summary.textContent = `${fileName}`;
+          details.appendChild(summary);
+
+          const inner = document.createElement("div");
+          const textarea = document.createElement("textarea");
+          textarea.value = fileContent;
+          textarea.rows = 12;
+          textarea.style.width = "100%";
+
+          const copyBtn = document.createElement("button");
+          copyBtn.textContent = "复制内容";
+          copyBtn.className = "copy secondary";
+          copyBtn.type = "button";
+          copyBtn.addEventListener("click", async () => {
+            await navigator.clipboard.writeText(fileContent);
+            copyBtn.textContent = "已复制 ✓";
+            copyBtn.classList.add("success");
+            setTimeout(() => {
+              copyBtn.textContent = "复制内容";
+              copyBtn.classList.remove("success");
+            }, 2000);
+          });
+
+          inner.appendChild(textarea);
+          inner.appendChild(copyBtn);
+          details.appendChild(inner);
+
+          outputContainer.appendChild(details);
+        });
+
+        const hint = document.createElement("p");
+        hint.className = "hint";
+        hint.innerHTML =
+          "复制对应文件内容，保存到 <code>src/content/posts/&lt;locale&gt;/</code> 目录下即可。";
+        outputContainer.appendChild(hint);
+      }
+
+      function resetOutput() {
+        outputContainer.innerHTML = "";
+      }
+
+      copyBaseBtn.addEventListener("click", copyBaseToLocales);
+      generateBtn.addEventListener("click", generateFiles);
+      resetBtn.addEventListener("click", resetOutput);
+
+      createLocaleSections();
+    </script>
+  </body>
+</html>
+

@@ -1,0 +1,525 @@
+{
+  "Common": {
+    "brand_name": "RemovExif",
+    "loading": "Loading...",
+    "error": "Something went wrong",
+    "home": "Home",
+    "blog": "Blog",
+    "features": "Features",
+    "how_to_use": "How to Use",
+    "faq": "FAQ",
+    "github": "GitHub",
+    "language": "Language",
+    "language_unavailable_hint": "This article is currently only available in {languages}.",
+    "back_to_blog": "← Back to Blog",
+    "try_now_title": "Try RemovExif Now",
+    "try_now_description": "Remove EXIF data from your photos instantly. 100% free and browser-based.",
+    "get_started": "Get Started"
+  },
+  "Footer": {
+    "legal": "Legal",
+    "resources": "Resources",
+    "privacy_policy": "Privacy Policy",
+    "terms_of_service": "Terms of Service",
+    "about_us": "About Us",
+    "contact_us": "Contact Us",
+    "copyright": "© {year} RemovExif. All rights reserved.",
+    "description": "Free online tool to remove EXIF data from photos. Protect your privacy by removing GPS coordinates, camera info, and timestamps."
+  },
+  "Home": {
+    "hero_title": "Free Online EXIF Viewer & Remover",
+    "hero_subtitle": "Remove GPS, Camera model, and DateTime instantly. 100% Browser-based privacy.",
+    "dropzone_main": "Drop images here",
+    "dropzone_sub": "or click to upload",
+    "dropzone_supported": "Supports JPG, PNG, WebP, GIF, BMP, TIFF, AVIF, HEIC",
+    "dropzone_max_size": "Maximum file size: {maxSize}MB per file",
+    "upload_progress_title": "Uploading your images...",
+    "upload_progress_subtitle": "This step usually takes about {seconds} seconds.",
+    "upload_progress_subtitle_slow": "Large files detected. Hang tight while we finish the upload.",
+    "upload_progress_error": "Upload interrupted. Please try again.",
+    "upload_progress_aria_label": "Upload progress",
+    "stats_images_processed": "images",
+    "stats_total_processed": "processed",
+    "stats_summary": "We have removed EXIF data from {count} images, with a total file size of {size}",
+    "feature_privacy_title": "Privacy First",
+    "feature_privacy_desc": "All processing happens in your browser. No uploads, no servers, zero tracking.",
+    "feature_batch_title": "Batch Power",
+    "feature_batch_desc": "Process multiple images at once. Download all cleaned photos in a single ZIP file.",
+    "feature_lossless_title": "Lossless Quality",
+    "feature_lossless_desc": "Remove metadata without any quality loss. Your photos stay pixel-perfect.",
+    "seo_what_title": "What is EXIF Data?",
+    "seo_what_content": "EXIF (Exchangeable Image File Format) data is metadata embedded in digital photos. It includes information like camera make and model, GPS coordinates, date and time taken, ISO settings, aperture, and more. While useful for photographers, this data can reveal sensitive information about where and when photos were taken.",
+    "seo_why_title": "Why Remove EXIF Data?",
+    "seo_why_content": "Removing EXIF data protects your privacy by eliminating GPS coordinates that could reveal your location. It also prevents others from seeing camera settings, serial numbers, or timestamps. This is especially important when sharing photos on social media, forums, or public platforms where you want to maintain privacy.",
+    "seo_how_title": "How to Use This Tool?",
+    "seo_how_content": "Simply drag and drop your images into the upload area, or click to select files. Our tool will automatically detect and remove all EXIF metadata while preserving image quality. You can process multiple images at once and download them individually or as a ZIP file. All processing happens in your browser - your photos never leave your device.",
+    "preview_error_generic": "Failed to inspect EXIF data.",
+    "preview_list_title": "Selected files",
+    "preview_drawer_title": "Preview EXIF details",
+    "preview_drawer_subtitle": "Local-only analysis. Nothing leaves your device.",
+    "preview_loading": "Analyzing...",
+    "preview_meta_gps_flag": "GPS found",
+    "preview_meta_none_short": "No EXIF",
+    "preview_card_preview": "Preview EXIF",
+    "preview_card_clean": "Clean EXIF",
+    "preview_selected_label": "Currently reviewing",
+    "preview_meta_none": "No EXIF metadata detected for this file.",
+    "preview_meta_timestamp": "Captured on",
+    "preview_meta_camera": "Camera",
+    "preview_meta_exposure": "Exposure",
+    "preview_meta_resolution": "Resolution",
+    "preview_meta_gps": "GPS coordinates",
+    "preview_meta_gps_warning": "Share carefully — location data is embedded in this shot.",
+    "preview_primary_cta": "Confirm & clean EXIF",
+    "preview_secondary_cta": "Back to upload",
+    "preview_close": "Close preview"
+  },
+  "Dashboard": {
+    "analysis_complete": "Analysis Complete",
+    "images_processed": "images processed",
+    "gps_found": "GPS locations found",
+    "size_saved": "size saved",
+    "download_zip": "Download All (ZIP)",
+    "download_single": "Download Image",
+    "clear_all": "Clear All",
+    "start_over": "Start Over",
+    "list_view": "List View",
+    "grid_view": "Grid View",
+    "badge_gps_found": "GPS Location Found",
+    "badge_safe": "Safe to Share",
+    "badge_clean": "Clean",
+    "badge_privacy_risk": "Privacy Risk",
+    "badge_bokeh": "Bokeh Effect",
+    "badge_professional_camera": "Professional Camera",
+    "badge_low_light": "Low Light / Grainy",
+    "badge_high_iso": "High ISO",
+    "badge_telephoto": "Telephoto Lens",
+    "badge_wide_angle": "Wide Angle",
+    "file_size": "File Size",
+    "original": "Original",
+    "processed": "Processed",
+    "no_images": "No images to display",
+    "processing_analyzing": "Analyzing File Structure...",
+    "processing_detecting": "Detecting GPS Coordinates...",
+    "processing_verifying": "Verifying Privacy Tags...",
+    "processing_done": "Done!",
+    "processing_image": "Analyzing image {current} of {total}...",
+    "processing": "Processing...",
+    "images_data_lost": "Image data has been lost after page refresh.",
+    "please_reupload": "Please upload and process your images again to download them."
+  },
+  "SEO": {
+    "title_default": "RemovExif - Remove Metadata Online",
+    "desc_default": "Free tool to view and remove EXIF data from photos. Protect your privacy by removing GPS coordinates, camera info, and timestamps."
+  },
+  "Privacy": {
+    "title": "Privacy Policy",
+    "last_updated": "Last Updated",
+    "introduction": {
+      "title": "Introduction",
+      "content": "RemovExif is committed to protecting your privacy. This Privacy Policy explains how we handle your data when you use our service. We respect your privacy rights and comply with applicable data protection laws, including the General Data Protection Regulation (GDPR) for users in the European Union."
+    },
+    "data_collection": {
+      "title": "Data Collection",
+      "content": "RemovExif processes all images entirely in your browser. We do not collect, store, or transmit any of your images or personal data. This means:",
+      "item1": "No image data is uploaded to our servers",
+      "item2": "No personal information is collected",
+      "item3": "All processing happens locally in your browser",
+      "item4": "No tracking of your usage patterns",
+      "item5": "No storage of your browsing history"
+    },
+    "automated_data": {
+      "title": "Automated Data Collection",
+      "content": "We may collect limited technical information automatically when you visit our website, such as:",
+      "item1": "IP address (anonymized)",
+      "item2": "Browser type and version",
+      "item3": "Device information",
+      "item4": "Pages visited and time spent",
+      "note": "This information is used solely for website analytics and improving user experience. It is not linked to your identity."
+    },
+    "legal_basis": {
+      "title": "Legal Basis for Processing (GDPR)",
+      "content": "For users in the European Union, we process your data based on the following legal grounds:",
+      "item1": "Legitimate interest: To provide and improve our service",
+      "item2": "Consent: For advertising cookies (you can withdraw consent at any time)",
+      "item3": "Legal obligation: To comply with applicable laws"
+    },
+    "your_rights": {
+      "title": "Your Rights (GDPR)",
+      "content": "If you are located in the European Union, you have the following rights under GDPR:",
+      "right1": "Right of Access: You can request information about what personal data we hold about you",
+      "right2": "Right to Rectification: You can request correction of inaccurate data",
+      "right3": "Right to Erasure: You can request deletion of your personal data",
+      "right4": "Right to Restrict Processing: You can request limitation of how we process your data",
+      "right5": "Right to Data Portability: You can request your data in a portable format",
+      "right6": "Right to Object: You can object to processing of your personal data",
+      "right7": "Right to Withdraw Consent: You can withdraw consent for data processing at any time",
+      "note": "To exercise any of these rights, please contact us at support@removexif.com"
+    },
+    "data_retention": {
+      "title": "Data Retention",
+      "content": "Since we do not collect or store your images or personal data, there is no data to retain. Any technical information collected for analytics purposes is retained only as long as necessary to provide our service and is then anonymized or deleted."
+    },
+    "data_security": {
+      "title": "Data Security",
+      "content": "We implement appropriate technical and organizational measures to protect any data we may collect. However, since all image processing happens in your browser, your photos never leave your device, providing the highest level of security for your images."
+    },
+    "advertising": {
+      "title": "Advertising Partners",
+      "content": "We may use third-party advertising services to serve advertisements on our website. If approved, these services may use cookies and similar technologies to provide personalized ads based on your browsing behavior.",
+      "partners": "For more information about how advertising partners use data, please visit their respective privacy policies. If we use Google AdSense, you can learn more at https://policies.google.com/privacy.",
+      "opt_out": "You can opt out of personalized advertising by visiting your advertising partner's settings or by disabling cookies in your browser."
+    },
+    "cookies": {
+      "title": "Cookies",
+      "content": "We may use cookies for advertising purposes through third-party advertising services (if approved). These cookies help deliver relevant advertisements and measure ad performance. You can disable cookies in your browser settings, though this may affect the functionality of some features.",
+      "types": "Types of cookies we may use:",
+      "type1": "Essential cookies: Required for basic website functionality",
+      "type2": "Advertising cookies: Used by third-party advertising services to show relevant ads (if applicable)"
+    },
+    "third_party": {
+      "title": "Third-Party Services",
+      "content": "We may use third-party services that collect information used to identify you. These services may include:",
+      "service1": "Advertising services: Third-party advertising networks (if approved) for serving advertisements",
+      "service2": "Analytics services: To understand website usage (if applicable)",
+      "note": "These third parties have their own privacy policies. We encourage you to review them. We will update this section once advertising services are approved and implemented."
+    },
+    "children": {
+      "title": "Children's Privacy",
+      "content": "Our service is not intended for children under the age of 13. We do not knowingly collect personal information from children. If you are a parent or guardian and believe your child has provided us with personal information, please contact us immediately."
+    },
+    "changes": {
+      "title": "Changes to This Privacy Policy",
+      "content": "We may update this Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page and updating the 'Last Updated' date. You are advised to review this Privacy Policy periodically for any changes."
+    },
+    "contact": {
+      "title": "Contact Us",
+      "content": "If you have questions about this Privacy Policy or wish to exercise your rights under GDPR, please contact us at:",
+      "email": "Email: support@removexif.com",
+      "note": "We will respond to your inquiry within 30 days as required by GDPR."
+    }
+  },
+  "Terms": {
+    "title": "Terms of Service",
+    "last_updated": "Last Updated",
+    "introduction": {
+      "title": "Introduction",
+      "content": "Welcome to RemovExif. By accessing or using our website and services, you agree to be bound by these Terms of Service. If you do not agree to these terms, please do not use our service."
+    },
+    "service_description": {
+      "title": "Service Description",
+      "content": "RemovExif is a free, browser-based tool that allows you to remove EXIF metadata from digital images. The service processes images entirely in your browser - no images are uploaded to our servers. All processing happens locally on your device."
+    },
+    "usage": {
+      "title": "Acceptable Use",
+      "content": "You may use RemovExif for lawful purposes only. By using our service, you agree not to:",
+      "item1": "Use the service to process illegal, harmful, or offensive content",
+      "item2": "Attempt to reverse engineer, decompile, or disassemble the service",
+      "item3": "Use automated systems or bots to access the service without permission",
+      "item4": "Interfere with or disrupt the service or servers",
+      "item5": "Violate any applicable laws or regulations",
+      "item6": "Infringe upon the rights of others"
+    },
+    "user_responsibility": {
+      "title": "User Responsibility",
+      "content": "You are solely responsible for:",
+      "item1": "The content of images you process using our service",
+      "item2": "Ensuring you have the right to process and modify the images",
+      "item3": "Backing up your original images before processing",
+      "item4": "Complying with all applicable laws and regulations",
+      "note": "We do not review, monitor, or control the content of images processed through our service."
+    },
+    "intellectual_property": {
+      "title": "Intellectual Property",
+      "content": "The RemovExif service, including its design, code, and functionality, is protected by intellectual property laws. You may not copy, modify, distribute, or create derivative works without our express written permission. However, RemovExif is open-source software, and you may use it in accordance with its open-source license."
+    },
+    "disclaimers": {
+      "title": "Disclaimers",
+      "content": "RemovExif is provided 'as is' and 'as available' without any warranties, express or implied. We do not guarantee that:",
+      "item1": "The service will be uninterrupted or error-free",
+      "item2": "The service will meet your specific requirements",
+      "item3": "All EXIF data will be completely removed in all cases",
+      "item4": "The processed images will be free from all metadata",
+      "note": "While we strive to remove all EXIF data, some metadata formats may not be detected or removed in certain circumstances."
+    },
+    "liability": {
+      "title": "Limitation of Liability",
+      "content": "To the fullest extent permitted by law, RemovExif and its operators shall not be liable for any indirect, incidental, special, consequential, or punitive damages, or any loss of profits or revenues, whether incurred directly or indirectly, or any loss of data, use, goodwill, or other intangible losses resulting from:",
+      "item1": "Your use or inability to use the service",
+      "item2": "Any errors or omissions in the service",
+      "item3": "Any loss or damage to your images or data",
+      "item4": "Unauthorized access to or use of our servers",
+      "item5": "Any bugs, viruses, or other harmful components",
+      "note": "In no event shall our total liability exceed the amount you paid to us (which is $0, as the service is free)."
+    },
+    "indemnification": {
+      "title": "Indemnification",
+      "content": "You agree to indemnify and hold harmless RemovExif and its operators from any claims, damages, losses, liabilities, and expenses (including legal fees) arising from your use of the service, violation of these terms, or infringement of any rights of another party."
+    },
+    "modifications": {
+      "title": "Modifications to Service",
+      "content": "We reserve the right to modify, suspend, or discontinue the service at any time, with or without notice. We may also update these Terms of Service from time to time. Continued use of the service after changes constitutes acceptance of the new terms."
+    },
+    "termination": {
+      "title": "Termination",
+      "content": "We may terminate or suspend your access to the service immediately, without prior notice, for any reason, including if you breach these Terms of Service. Upon termination, your right to use the service will cease immediately."
+    },
+    "governing_law": {
+      "title": "Governing Law",
+      "content": "These Terms of Service shall be governed by and construed in accordance with applicable laws, without regard to conflict of law provisions. Any disputes arising from these terms or the service shall be resolved through appropriate legal channels."
+    },
+    "contact": {
+      "title": "Contact Information",
+      "content": "If you have any questions about these Terms of Service, please contact us at:",
+      "email": "Email: support@removexif.com"
+    }
+  },
+  "About": {
+    "title": "About Us",
+    "mission": {
+      "title": "Our Mission",
+      "content": "RemovExif is a free, open-source tool designed to help users protect their privacy by removing EXIF data from photos. We believe that privacy is a fundamental right, and everyone should have easy access to tools that help them maintain control over their personal information."
+    },
+    "how_it_works": {
+      "title": "How It Works",
+      "content": "All image processing happens entirely in your browser using client-side JavaScript. This means:",
+      "item1": "Your photos never leave your device",
+      "item2": "No data is uploaded to our servers",
+      "item3": "Complete privacy and security",
+      "item4": "Fast processing without network delays",
+      "item5": "Works offline once the page is loaded"
+    },
+    "features": {
+      "title": "Key Features",
+      "item1": "100% browser-based processing - no uploads required",
+      "item2": "Batch processing - handle multiple images at once",
+      "item3": "Lossless quality - your images remain pixel-perfect",
+      "item4": "Supports JPG, PNG, WebP, GIF, BMP, TIFF, AVIF, and HEIC formats",
+      "item5": "Free and open-source - no hidden costs",
+      "item6": "No registration required - use it immediately"
+    },
+    "open_source": {
+      "title": "Open Source",
+      "content": "RemovExif is built as an open-source project, which means the code is publicly available and can be reviewed, audited, and improved by the community. This transparency ensures that you can trust the tool with your privacy-sensitive images."
+    },
+    "contact": {
+      "title": "Contact Us",
+      "content": "We'd love to hear from you! Whether you have questions, suggestions, or feedback, please reach out to us:",
+      "email": "Email: support@removexif.com",
+      "note": "We aim to respond to all inquiries within 48 hours."
+    },
+    "support": {
+      "title": "Support the Project",
+      "content": "If you find RemovExif useful, please consider:",
+      "item1": "Sharing it with friends and family who care about privacy",
+      "item2": "Contributing to the project on GitHub",
+      "item3": "Reporting bugs or suggesting improvements",
+      "item4": "Spreading the word on social media"
+    }
+  },
+  "CookieBanner": {
+    "title": "We Use Cookies",
+    "description": "We may use cookies to show you relevant ads through third-party advertising services.",
+    "learn_more": "Learn more",
+    "accept": "Accept All",
+    "reject": "Reject"
+  },
+  "Footer": {
+    "legal": "Legal",
+    "resources": "Resources",
+    "privacy_policy": "Privacy Policy",
+    "terms_of_service": "Terms of Service",
+    "about_us": "About Us",
+    "contact_us": "Contact Us",
+    "copyright": "© {year} RemovExif. All rights reserved.",
+    "description": "Free online tool to remove EXIF data from photos. Protect your privacy by removing GPS coordinates, camera info, and timestamps.",
+    "manage_cookies": "Manage Cookies"
+  },
+  "Widgets": {
+    "PrivacyTrivia": {
+      "tip_1": "Did you know? Your photos can reveal your exact location through GPS coordinates embedded in EXIF data.",
+      "tip_2": "Privacy tip: Always remove EXIF data before sharing photos on social media to protect your location privacy.",
+      "tip_3": "Fun fact: EXIF data can include camera serial numbers, which could be used to track your device.",
+      "tip_4": "Security reminder: Photos taken with smartphones often contain GPS coordinates that reveal where you live or work.",
+      "tip_5": "Best practice: Remove metadata from photos before uploading them to public forums or cloud storage."
+    },
+    "FeaturedGuides": {
+      "title": "Learn Photography",
+      "guide_1_title": "How to Remove GPS from iPhone Photos",
+      "guide_1_desc": "Step-by-step guide to protect your privacy when sharing iPhone photos.",
+      "guide_2_title": "Is it Safe to Share Photos on Reddit?",
+      "guide_2_desc": "Learn about privacy risks and how to safely share images online.",
+      "guide_3_title": "Check Shutter Count Online Free",
+      "guide_3_desc": "Discover how to check your camera's shutter count using EXIF data.",
+      "guide_4_title": "Remove Camera Serial Number Metadata",
+      "guide_4_desc": "Protect your device identity by removing serial numbers from photos.",
+      "read_more": "Read more articles"
+    },
+    "Transparency": {
+      "title": "Why is RemovExif free?",
+      "description": "We believe privacy tools should be accessible to everyone. RemovExif is free and open-source. Help us spread the word by sharing this tool with others who care about their privacy.",
+      "share_text": "Check out RemovExif - a free tool to remove EXIF data from photos and protect your privacy!",
+      "share_on_x": "Share on X",
+      "share_on_facebook": "Share on Facebook"
+    }
+  },
+  "ChameleonSidebar": {
+    "badge": "Chameleon Lab",
+    "title": "Adaptive privacy sidebar · Coming soon",
+    "description": "This reserved slot will host the Chameleon intelligence feed. It adapts EXIF Viewer insights, compliance snippets, and remediation prompts based on the industry or campaign you are running.",
+    "bullets": [
+      "Persona-aware EXIF Viewer insights and alerts",
+      "GPS, serial number, and timestamp risk scoring",
+      "Workflow hooks for automation and editorial snippets"
+    ],
+    "cta": "Set NEXT_PUBLIC_ENABLE_CHAMELEON_SIDEBAR=true to preview the layout."
+  },
+  "FeaturesPage": {
+    "meta": {
+      "title": "RemovExif Features | Online EXIF Viewer & Metadata Remover",
+      "description": "RemovExif combines a high-fidelity EXIF Viewer with a zero-upload metadata remover. Use it to audit GPS coordinates, clean camera fingerprints, and publish privacy-safe photos without touching a server."
+    },
+    "hero": {
+      "badge": "EXIF Viewer + Metadata Remover",
+      "title": "Features engineered for privacy, SEO, and creator workflows",
+      "description": "RemovExif combines a high-fidelity EXIF Viewer with a zero-upload metadata remover. Use it to audit GPS coordinates, clean camera fingerprints, and publish privacy-safe photos without touching a server."
+    },
+    "sections": {
+      "instant": {
+        "title": "Instant EXIF Viewer & analyzer",
+        "description": "Inspect GPS coordinates, camera models, shutter counts, lenses, and software tags from any browser. The viewer loads entirely client-side, so even forensic reviews stay on your device.",
+        "highlights": [
+          "Surface GPS latitude/longitude before a photo hits social media",
+          "Spot camera serial numbers, lens IDs, firmware versions, and editing traces",
+          "Generate shareable EXIF summaries for blog posts or documentation"
+        ]
+      },
+      "remover": {
+        "title": "One-click metadata remover",
+        "description": "Clean every trace of EXIF metadata without sacrificing quality. Our remover rewrites headers in-memory, ensuring privacy teams, journalists, and community managers can publish safely.",
+        "highlights": [
+          "Remove GPS, IPTC, XMP, and proprietary tags in a single pass",
+          "Batch-process galleries or campaign assets with the same workflow",
+          "Keep originals untouched while exporting sanitized versions"
+        ]
+      },
+      "automation": {
+        "title": "Workflow-grade automation",
+        "description": "The EXIF Viewer doubles as a triage board. Flag risky assets, add badges, and ship clean deliverables to CMS, DAM, or chat handoffs without rework.",
+        "highlights": [
+          "Label files with privacy badges for legal, marketing, or OSS teams",
+          "Generate instant download zips for stakeholders",
+          "Mirror approvals with our brutalist UI that stays laser-focused on action"
+        ]
+      }
+    },
+    "cta": {
+      "title": "Ready to clean your next drop?",
+      "description": "Launch RemovExif, inspect EXIF data, and share privacy-safe shots in under a minute.",
+      "button": "Open the EXIF Viewer"
+    }
+  },
+  "HowToUsePage": {
+    "meta": {
+      "title": "How to Use the RemovExif Viewer & Remover",
+      "description": "Follow this blueprint to upload, audit, and clean EXIF metadata entirely in your browser. No installs, no uploads, just instant privacy control."
+    },
+    "hero": {
+      "badge": "How to use RemovExif",
+      "title": "Step-by-step guide to the EXIF Viewer workflow",
+      "description": "Follow this blueprint to upload, audit, and clean EXIF metadata entirely in your browser. No installs, no uploads, just instant privacy control."
+    },
+    "steps": {
+      "upload": {
+        "title": "1. Upload or drop your photos",
+        "description": "Drag files into the brutalist upload zone or click to browse. RemovExif supports JPG, PNG, WebP, GIF, BMP, TIFF, AVIF, and HEIC up to enterprise-friendly sizes.",
+        "metadata": [
+          "Tip: rename batches with campaign or shoot IDs for faster triage."
+        ]
+      },
+      "preview": {
+        "title": "2. Preview EXIF data",
+        "description": "Use the viewer drawer to inspect GPS coordinates, timestamps, camera bodies, lenses, ISO, aperture, and shutter speeds. Flag shots that still contain sensitive EXIF fields.",
+        "metadata": [
+          "Reminder: double-check sensitive fields before sharing."
+        ]
+      },
+      "clean": {
+        "title": "3. Clean metadata instantly",
+        "description": "Hit \"Confirm & clean EXIF\" to rewrite headers locally. The remover strips GPS, IPTC, and XMP tags without changing pixels or introducing compression artifacts.",
+        "metadata": [
+          "No upload occurs, so newsroom and legal teams can approve faster."
+        ]
+      },
+      "distribute": {
+        "title": "4. Download & distribute",
+        "description": "Export individual files or download a ZIP archive. Share clean deliverables to CMS, Slack, Discord, newsletters, or marketplaces without leaking location data.",
+        "metadata": [
+          "Add a \"Clean\" label so teammates know the files are safe."
+        ]
+      }
+    },
+    "checklist": {
+      "title": "Quick checklist before publishing",
+        "items": [
+        "Double-check GPS coordinates, timestamps, and camera IDs",
+          "Confirm the brutalist badges show \"Safe to Share\"",
+        "Download the sanitized ZIP and archive originals",
+        "Document the workflow in your knowledge base so teammates can reuse it"
+      ]
+    },
+    "use_cases": {
+      "title": "Where teams deploy this EXIF Viewer playbook",
+      "items": [
+        "Social media managers posting behind-the-scenes content",
+        "Photojournalists sharing sensitive field work",
+        "Marketplace sellers removing GPS before uploading product shots",
+        "Developers embedding an EXIF removal step into CI/CD for assets"
+      ]
+    },
+    "cta": {
+      "title": "Launch the workflow",
+      "description": "Open RemovExif, drag your assets, and share privacy-safe photos within minutes.",
+      "button": "Try RemovExif free"
+    }
+  },
+  "FAQPage": {
+    "meta": {
+      "title": "EXIF Viewer FAQ | RemovExif",
+      "description": "Use this FAQ to capture search traffic around EXIF viewers, GPS removal, and browser privacy workflows. Update it as you add new automations."
+    },
+    "hero": {
+      "badge": "FAQ",
+      "title": "EXIF Viewer & remover questions",
+      "description": "Use this FAQ to capture search traffic around EXIF viewers, GPS removal, and browser privacy workflows. Update it as you add new automations."
+    },
+    "faqs": [
+      {
+        "question": "Is RemovExif just an EXIF Viewer or also a remover?",
+        "answer": "Both. The viewer lets you inspect GPS coordinates, camera metadata, and timestamps. Once you are confident, the remover strips those fields locally so nothing ever uploads."
+      },
+      {
+        "question": "Does the EXIF Viewer work offline?",
+        "answer": "Yes. After the page loads, every preview and cleaning action runs inside your browser. That means reporters, NGOs, and privacy teams can use it from locked-down networks."
+      },
+      {
+        "question": "What formats can I clean?",
+        "answer": "Upload JPG, PNG, WebP, GIF, BMP, TIFF, AVIF, and HEIC. The tool automatically detects available EXIF, IPTC, and XMP metadata and removes what it finds."
+      },
+      {
+        "question": "Will removing EXIF impact image quality?",
+        "answer": "No. RemovExif edits metadata segments only. Pixels remain untouched, so your files keep the same resolution, color profile, and compression settings."
+      },
+      {
+        "question": "Can I process multiple photos in one go?",
+        "answer": "Absolutely. Drop an entire folder or drag multiple files. You can preview each file’s EXIF data, then download cleaned images individually or as a ZIP archive."
+      }
+    ],
+    "cta": {
+      "title": "Still have EXIF Viewer questions?",
+      "description": "Open the app, scan your files, and watch the brutalist badges confirm they’re safe to post.",
+      "button": "Start a free EXIF scan"
+    }
+  }
+}
+

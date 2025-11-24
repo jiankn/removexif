@@ -1,0 +1,513 @@
+{
+  "Common": {
+    "brand_name": "RemovExif",
+    "loading": "載入中...",
+    "error": "發生錯誤",
+    "home": "首頁",
+    "blog": "部落格",
+    "features": "功能亮點",
+    "how_to_use": "使用指南",
+    "faq": "常見問題",
+    "github": "GitHub",
+    "language": "語言",
+    "language_unavailable_hint": "本篇文章目前僅提供 {languages} 版本。",
+    "back_to_blog": "← 返回部落格",
+    "try_now_title": "立即試用 RemovExif",
+    "try_now_description": "即時移除照片中的 EXIF 資料。100% 免費且基於瀏覽器。",
+    "get_started": "開始使用"
+  },
+  "Home": {
+    "hero_title": "免費線上 EXIF 檢視器與移除工具",
+    "hero_subtitle": "立即移除 GPS、相機型號和日期時間。100% 瀏覽器端處理，保護隱私。",
+    "dropzone_main": "拖放圖片到這裡",
+    "dropzone_sub": "或點擊上傳",
+    "dropzone_supported": "支援 JPG、PNG、WebP、GIF、BMP、TIFF、AVIF、HEIC",
+    "dropzone_max_size": "單個檔案最大：{maxSize}MB",
+    "upload_progress_title": "正在上傳圖片...",
+    "upload_progress_subtitle": "這一步通常只需要約 {seconds} 秒。",
+    "upload_progress_subtitle_slow": "偵測到大檔案，請稍候，我們正在完成上傳。",
+    "upload_progress_error": "上傳中斷，請重試。",
+    "upload_progress_aria_label": "上傳進度",
+    "stats_images_processed": "張圖片",
+    "stats_total_processed": "已處理",
+    "stats_summary": "我們已為 {count} 張圖片清除過 EXIF 資訊，總共檔案大小 {size}",
+    "feature_privacy_title": "隱私優先",
+    "feature_privacy_desc": "所有處理都在您的瀏覽器中完成。不上傳、無伺服器、零追蹤。",
+    "feature_batch_title": "批次處理",
+    "feature_batch_desc": "一次處理多張圖片。將所有清理後的照片打包成 ZIP 檔案下載。",
+    "feature_lossless_title": "無損品質",
+    "feature_lossless_desc": "移除後設資料而不損失任何畫質。您的照片保持完美像素。",
+    "seo_what_title": "什麼是 EXIF 資料？",
+    "seo_what_content": "EXIF（可交換影像檔案格式）資料是嵌入在數位照片中的後設資料。它包括相機品牌和型號、GPS 座標、拍攝日期和時間、ISO 設定、光圈等資訊。雖然對攝影師很有用，但這些資料可能洩露有關照片拍攝地點和時間的敏感資訊。",
+    "seo_why_title": "為什麼要移除 EXIF 資料？",
+    "seo_why_content": "移除 EXIF 資料可以保護您的隱私，消除可能洩露您位置的 GPS 座標。它還可以防止他人查看相機設定、序號或時間戳記。這在社群媒體、論壇或公開平台上分享照片時尤其重要，因為您希望保持隱私。",
+    "seo_how_title": "如何使用此工具？",
+    "seo_how_content": "只需將圖片拖放到上傳區域，或點擊選擇檔案。我們的工具會自動偵測並移除所有 EXIF 後設資料，同時保持圖片品質。您可以一次處理多張圖片，並單獨下載或打包成 ZIP 檔案下載。所有處理都在您的瀏覽器中完成 - 您的照片永遠不會離開您的裝置。",
+    "preview_error_generic": "解析 EXIF 資料失敗。",
+    "preview_list_title": "已選檔案",
+    "preview_drawer_title": "先預覽 EXIF 詳情",
+    "preview_drawer_subtitle": "純本地解析，資料不會離開你的裝置。",
+    "preview_loading": "解析中...",
+    "preview_meta_gps_flag": "偵測到 GPS",
+    "preview_meta_none_short": "無 EXIF",
+    "preview_card_preview": "預覽 EXIF",
+    "preview_card_clean": "清除 EXIF",
+    "preview_selected_label": "目前檢視",
+    "preview_meta_none": "此檔案未偵測到任何 EXIF 後設資料。",
+    "preview_meta_timestamp": "拍攝時間",
+    "preview_meta_camera": "相機設備",
+    "preview_meta_exposure": "曝光參數",
+    "preview_meta_resolution": "解析度",
+    "preview_meta_gps": "GPS 座標",
+    "preview_meta_gps_warning": "分享前請注意，這張照片含有位置資訊。",
+    "preview_primary_cta": "確認並清除 EXIF",
+    "preview_secondary_cta": "返回重新選擇",
+    "preview_close": "關閉預覽"
+  },
+  "Dashboard": {
+    "analysis_complete": "分析完成",
+    "images_processed": "圖片已處理",
+    "gps_found": "個 GPS 位置",
+    "size_saved": "節省空間",
+    "download_zip": "下載全部 (ZIP)",
+    "download_single": "下載圖片",
+    "clear_all": "清除全部",
+    "start_over": "重新開始",
+    "list_view": "清單檢視",
+    "grid_view": "網格檢視",
+    "badge_gps_found": "發現 GPS 位置",
+    "badge_safe": "可安全分享",
+    "badge_clean": "已清理",
+    "badge_privacy_risk": "隱私風險",
+    "badge_bokeh": "背景虛化",
+    "badge_professional_camera": "專業相機",
+    "badge_low_light": "低光/顆粒",
+    "badge_high_iso": "高 ISO",
+    "badge_telephoto": "長焦鏡頭",
+    "badge_wide_angle": "廣角鏡頭",
+    "file_size": "檔案大小",
+    "original": "原始",
+    "processed": "處理後",
+    "no_images": "沒有圖片可顯示",
+    "processing_analyzing": "正在分析檔案結構...",
+    "processing_detecting": "正在偵測 GPS 座標...",
+    "processing_verifying": "正在驗證隱私標籤...",
+    "processing_done": "完成！",
+    "processing_image": "正在分析第 {current} 張，共 {total} 張...",
+    "processing": "處理中..."
+  },
+  "SEO": {
+    "title_default": "RemovExif - 線上移除圖片後設資料",
+    "desc_default": "免費工具，檢視和移除照片中的 EXIF 資料。透過移除 GPS 座標、相機資訊和時間戳記來保護您的隱私。"
+  },
+  "Widgets": {
+    "PrivacyTrivia": {
+      "tip_1": "您知道嗎？您的照片可能透過 EXIF 資料中嵌入的 GPS 座標洩露您的確切位置。",
+      "tip_2": "隱私提示：在社群媒體上分享照片前，請務必移除 EXIF 資料以保護您的位置隱私。",
+      "tip_3": "有趣的事實：EXIF 資料可能包含相機序號，這些資訊可能被用來追蹤您的裝置。",
+      "tip_4": "安全提醒：用智慧型手機拍攝的照片通常包含 GPS 座標，可能洩露您居住或工作的地方。",
+      "tip_5": "最佳實踐：在上傳到公開論壇或雲端儲存之前，請從照片中移除後設資料。"
+    },
+    "FeaturedGuides": {
+      "title": "學習攝影",
+      "guide_1_title": "如何從 iPhone 照片中移除 GPS",
+      "guide_1_desc": "分享 iPhone 照片時保護隱私的逐步指南。",
+      "guide_2_title": "在 Reddit 上分享照片安全嗎？",
+      "guide_2_desc": "了解隱私風險以及如何安全地在網上分享圖片。",
+      "guide_3_title": "免費線上檢查快門次數",
+      "guide_3_desc": "了解如何使用 EXIF 資料檢查相機的快門次數。",
+      "guide_4_title": "移除相機序號後設資料",
+      "guide_4_desc": "透過從照片中移除序號來保護您的裝置身份。",
+      "read_more": "閱讀更多文章"
+    },
+    "Transparency": {
+      "title": "為什麼 RemovExif 是免費的？",
+      "description": "我們相信隱私工具應該對所有人開放。RemovExif 是免費且開源的。透過與其他關心隱私的人分享這個工具，幫助我們傳播這個理念。",
+      "share_text": "看看 RemovExif - 一個免費工具，可以移除照片中的 EXIF 資料並保護您的隱私！",
+      "share_on_x": "在 X 上分享",
+      "share_on_facebook": "在 Facebook 上分享"
+    }
+  },
+  "Privacy": {
+    "title": "隱私政策",
+    "last_updated": "最後更新",
+    "introduction": {
+      "title": "介紹",
+      "content": "RemovExif致力於保護您的隱私。本隱私政策說明了您使用我們的服務時我們如何處理您的資料。我們尊重您的隱私權，並遵守適用的資料保護法律，包括針對歐盟用戶的《一般資料保護規則》（GDPR）。"
+    },
+    "data_collection": {
+      "title": "資料收集",
+      "content": "RemovExif完全在您的瀏覽器中處理所有圖像。我們不收集、儲存或傳輸您的任何圖像或個人資料。這意味著：",
+      "item1": "沒有圖像資料上傳到我們的伺服器",
+      "item2": "不收集個人資訊",
+      "item3": "所有處理都在您的瀏覽器中本地進行",
+      "item4": "不追蹤您的使用模式",
+      "item5": "不儲存您的瀏覽歷史"
+    },
+    "automated_data": {
+      "title": "自動資料收集",
+      "content": "當您訪問我們的網站時，我們可能會自動收集有限的技術資訊，例如：",
+      "item1": "IP位址（匿名化）",
+      "item2": "瀏覽器類型和版本",
+      "item3": "裝置資訊",
+      "item4": "訪問的頁面和花費的時間",
+      "note": "此資訊僅用於網站分析和改善用戶體驗。它不會與您的身份相關聯。"
+    },
+    "legal_basis": {
+      "title": "處理的法律依據（GDPR）",
+      "content": "對於歐盟用戶，我們基於以下法律依據處理您的資料：",
+      "item1": "合法利益：提供和改進我們的服務",
+      "item2": "同意：用於廣告Cookie（您可以隨時撤回同意）",
+      "item3": "法律義務：遵守適用法律"
+    },
+    "your_rights": {
+      "title": "您的權利（GDPR）",
+      "content": "如果您位於歐盟，根據GDPR，您擁有以下權利：",
+      "right1": "訪問權：您可以請求有關我們持有的您的個人資料的資訊",
+      "right2": "更正權：您可以請求更正不準確的資料",
+      "right3": "刪除權：您可以請求刪除您的個人資料",
+      "right4": "限制處理權：您可以請求限制我們處理您資料的方式",
+      "right5": "資料可攜權：您可以請求以可攜式格式獲取您的資料",
+      "right6": "反對權：您可以反對處理您的個人資料",
+      "right7": "撤回同意權：您可以隨時撤回資料處理同意",
+      "note": "要行使這些權利中的任何一項，請透過support@removexif.com聯繫我們"
+    },
+    "data_retention": {
+      "title": "資料保留",
+      "content": "由於我們不收集或儲存您的圖像或個人資料，因此沒有需要保留的資料。為分析目的收集的任何技術資訊僅在提供我們服務所需的時間內保留，然後會被匿名化或刪除。"
+    },
+    "data_security": {
+      "title": "資料安全",
+      "content": "我們實施適當的技術和組織措施來保護我們可能收集的任何資料。但是，由於所有圖像處理都在您的瀏覽器中進行，您的照片永遠不會離開您的裝置，為您的圖像提供最高級別的安全性。"
+    },
+    "advertising": {
+      "title": "廣告合作夥伴",
+      "content": "我們可能會使用第三方廣告服務在我們的網站上投放廣告。如果獲得批准，這些服務可能使用Cookie和類似技術，根據您的瀏覽行為提供個人化廣告。",
+      "partners": "有關廣告合作夥伴如何使用資料的更多資訊，請訪問其各自的隱私政策。如果我們使用Google AdSense，您可以訪問 https://policies.google.com/privacy 了解更多資訊。",
+      "opt_out": "您可以透過訪問廣告合作夥伴的設定或在瀏覽器中停用Cookie來選擇退出個人化廣告。"
+    },
+    "cookies": {
+      "title": "Cookie",
+      "content": "我們可能會透過第三方廣告服務（如果獲得批准）將Cookie用於廣告目的。這些Cookie有助於提供相關廣告並衡量廣告效果。您可以在瀏覽器設定中停用Cookie，儘管這可能會影響某些功能的使用。",
+      "types": "我們可能使用的Cookie類型：",
+      "type1": "基本Cookie：網站基本功能所需",
+      "type2": "廣告Cookie：第三方廣告服務用於顯示相關廣告（如適用）"
+    },
+    "third_party": {
+      "title": "第三方服務",
+      "content": "我們可能使用收集用於識別您的資訊的第三方服務。這些服務可能包括：",
+      "service1": "廣告服務：第三方廣告網絡（如果獲得批准）用於投放廣告",
+      "service2": "分析服務：用於了解網站使用情況（如適用）",
+      "note": "這些第三方有自己的隱私政策。我們鼓勵您查看它們。一旦廣告服務獲得批准並實施，我們將更新此部分。"
+    },
+    "children": {
+      "title": "兒童隱私",
+      "content": "我們的服務不面向13歲以下的兒童。我們不會故意收集兒童的個人資訊。如果您是父母或監護人，並認為您的孩子向我們提供了個人資訊，請立即與我們聯繫。"
+    },
+    "changes": {
+      "title": "本隱私政策的變更",
+      "content": "我們可能會不時更新本隱私政策。我們將在本頁面上發布新的隱私政策並更新「最後更新」日期來通知您任何變更。建議您定期查看本隱私政策以了解任何變更。"
+    },
+    "contact": {
+      "title": "聯繫我們",
+      "content": "如果您對本隱私政策有任何疑問或希望根據GDPR行使您的權利，請透過以下方式聯繫我們：",
+      "email": "電子郵件：support@removexif.com",
+      "note": "我們將在GDPR要求的30天內回覆您的詢問。"
+    }
+  },
+  "Terms": {
+    "title": "服務條款",
+    "last_updated": "最後更新",
+    "introduction": {
+      "title": "介紹",
+      "content": "歡迎使用RemovExif。透過訪問或使用我們的網站和服務，您同意受這些服務條款的約束。如果您不同意這些條款，請不要使用我們的服務。"
+    },
+    "service_description": {
+      "title": "服務描述",
+      "content": "RemovExif是一個免費的基於瀏覽器的工具，允許您從數位圖像中刪除EXIF元資料。該服務完全在您的瀏覽器中處理圖像 - 沒有圖像上傳到我們的伺服器。所有處理都在您的裝置上本地進行。"
+    },
+    "usage": {
+      "title": "可接受的使用",
+      "content": "您只能將RemovExif用於合法目的。使用我們的服務，您同意不：",
+      "item1": "使用該服務處理非法、有害或冒犯性內容",
+      "item2": "嘗試對服務進行逆向工程、反編譯或反組譯",
+      "item3": "未經許可使用自動化系統或機器人訪問服務",
+      "item4": "干擾或中斷服務或伺服器",
+      "item5": "違反任何適用的法律或法規",
+      "item6": "侵犯他人的權利"
+    },
+    "user_responsibility": {
+      "title": "用戶責任",
+      "content": "您獨自負責：",
+      "item1": "您使用我們的服務處理的圖像內容",
+      "item2": "確保您有權處理和修改圖像",
+      "item3": "在處理前備份您的原始圖像",
+      "item4": "遵守所有適用的法律和法規",
+      "note": "我們不審查、監控或控制透過我們的服務處理的圖像內容。"
+    },
+    "intellectual_property": {
+      "title": "智慧財產權",
+      "content": "RemovExif服務，包括其設計、程式碼和功能，受智慧財產權法保護。未經我們明確的書面許可，您不得複製、修改、分發或創建衍生作品。但是，RemovExif是開源軟體，您可以根據其開源許可證使用它。"
+    },
+    "disclaimers": {
+      "title": "免責聲明",
+      "content": "RemovExif按「現狀」和「可用」提供，不提供任何明示或暗示的保證。我們不保證：",
+      "item1": "服務將不間斷或無錯誤",
+      "item2": "服務將滿足您的特定要求",
+      "item3": "在所有情況下所有EXIF資料都將被完全刪除",
+      "item4": "處理後的圖像將完全沒有元資料",
+      "note": "雖然我們努力刪除所有EXIF資料，但在某些情況下，某些元資料格式可能無法被檢測或刪除。"
+    },
+    "liability": {
+      "title": "責任限制",
+      "content": "在法律允許的最大範圍內，RemovExif及其運營商不對以下原因造成的任何間接、偶然、特殊、後果性或懲罰性損害，或任何利潤或收入損失（無論是直接還是間接產生的），或任何資料、使用、商譽或其他無形損失負責：",
+      "item1": "您使用或無法使用服務",
+      "item2": "服務中的任何錯誤或遺漏",
+      "item3": "您的圖像或資料的任何遺失或損壞",
+      "item4": "未經授權訪問或使用我們的伺服器",
+      "item5": "任何錯誤、病毒或其他有害組件",
+      "note": "在任何情況下，我們的總責任不超過您向我們支付的金額（由於服務是免費的，因此為$0）。"
+    },
+    "indemnification": {
+      "title": "賠償",
+      "content": "您同意賠償並使RemovExif及其運營商免受因您使用服務、違反這些條款或侵犯任何其他方的權利而產生的任何索賠、損害、損失、責任和費用（包括律師費）。"
+    },
+    "modifications": {
+      "title": "服務修改",
+      "content": "我們保留隨時修改、暫停或停止服務的權利，無論是否事先通知。我們也可以不時更新這些服務條款。在變更後繼續使用服務即表示接受新條款。"
+    },
+    "termination": {
+      "title": "終止",
+      "content": "我們可以立即終止或暫停您對服務的訪問，無需事先通知，原因包括但不限於您違反這些服務條款。終止時，您使用服務的權利將立即停止。"
+    },
+    "governing_law": {
+      "title": "適用法律",
+      "content": "這些服務條款應受適用法律管轄並根據其解釋，不考慮法律衝突條款。因這些條款或服務產生的任何爭議應透過適當的法律途徑解決。"
+    },
+    "contact": {
+      "title": "聯繫資訊",
+      "content": "如果您對這些服務條款有任何疑問，請透過以下方式聯繫我們：",
+      "email": "電子郵件：support@removexif.com"
+    }
+  },
+  "About": {
+    "title": "關於我們",
+    "mission": {
+      "title": "我們的使命",
+      "content": "RemovExif是一個免費的開源工具，旨在透過從照片中刪除EXIF資料來幫助用戶保護他們的隱私。我們相信隱私是一項基本權利，每個人都應該能夠輕鬆訪問有助於他們保持對個人資訊控制的工具。"
+    },
+    "how_it_works": {
+      "title": "工作原理",
+      "content": "所有圖像處理完全在您的瀏覽器中使用客戶端JavaScript進行。這意味著：",
+      "item1": "您的照片永遠不會離開您的裝置",
+      "item2": "沒有資料上傳到我們的伺服器",
+      "item3": "完全的隱私和安全性",
+      "item4": "快速處理，無網路延遲",
+      "item5": "頁面載入後即可離線工作"
+    },
+    "features": {
+      "title": "主要功能",
+      "item1": "100%基於瀏覽器的處理 - 無需上傳",
+      "item2": "批次處理 - 一次處理多張圖像",
+      "item3": "無損品質 - 您的圖像保持像素完美",
+      "item4": "支援JPG、PNG、WebP、GIF、BMP、TIFF、AVIF和HEIC格式",
+      "item5": "免費和開源 - 無隱藏成本",
+      "item6": "無需註冊 - 立即使用"
+    },
+    "open_source": {
+      "title": "開源",
+      "content": "RemovExif是作為開源專案構建的，這意味著程式碼是公開可用的，可以由社群審查、審計和改進。這種透明度確保您可以信任該工具來處理您對隱私敏感的圖像。"
+    },
+    "contact": {
+      "title": "聯繫我們",
+      "content": "我們很樂意聽到您的聲音！無論您有疑問、建議或反饋，請透過以下方式聯繫我們：",
+      "email": "電子郵件：support@removexif.com",
+      "note": "我們的目標是在48小時內回覆所有詢問。"
+    },
+    "support": {
+      "title": "支持專案",
+      "content": "如果您覺得RemovExif有用，請考慮：",
+      "item1": "與關心隱私的朋友和家人分享",
+      "item2": "在GitHub上為專案做出貢獻",
+      "item3": "報告錯誤或提出改進建議",
+      "item4": "在社交媒體上傳播"
+    }
+  },
+  "CookieBanner": {
+    "title": "我們使用 Cookie",
+    "description": "我們可能會使用 Cookie 透過第三方廣告服務向您展示相關廣告。",
+    "learn_more": "了解更多",
+    "accept": "接受全部",
+    "reject": "拒絕"
+  },
+  "Footer": {
+    "legal": "法律",
+    "resources": "資源",
+    "privacy_policy": "隱私政策",
+    "terms_of_service": "服務條款",
+    "about_us": "關於我們",
+    "contact_us": "聯絡我們",
+    "copyright": "© {year} RemovExif. 保留所有權利。",
+    "description": "免費線上工具，用於移除照片中的 EXIF 資料。透過移除 GPS 座標、相機資訊和時間戳記來保護您的隱私。",
+    "manage_cookies": "管理 Cookie"
+  },
+  "ChameleonSidebar": {
+    "badge": "Chameleon Lab",
+    "title": "Adaptive privacy sidebar · Coming soon",
+    "description": "This reserved slot will host the Chameleon intelligence feed. It adapts EXIF Viewer insights, compliance snippets, and remediation prompts based on the industry or campaign you are running.",
+    "bullets": [
+      "Persona-aware EXIF Viewer insights and alerts",
+      "GPS, serial number, and timestamp risk scoring",
+      "Workflow hooks for automation and editorial snippets"
+    ],
+    "cta": "Set NEXT_PUBLIC_ENABLE_CHAMELEON_SIDEBAR=true to preview the layout."
+  },
+  "FeaturesPage": {
+    "meta": {
+      "title": "RemovExif 功能 | 線上 EXIF 檢視與中繼資料清理",
+      "description": "RemovExif 將高保真的 EXIF 檢視器與零上傳的清理流程結合到瀏覽器中，協助你核對 GPS 座標、抹除相機指紋並安心發布照片。"
+    },
+    "hero": {
+      "badge": "EXIF 檢視器 + 中繼資料清理",
+      "title": "為隱私與創作者工作流程打造的功能",
+      "description": "RemovExif 完全在本地執行，從檢查 EXIF 到清理敏感欄位都不需上傳。記者、工作室或社群管理者都能在幾秒內掌控照片隱私。"
+    },
+    "sections": {
+      "instant": {
+        "title": "即時 EXIF 檢視與分析",
+        "description": "在任一瀏覽器中檢視 GPS 座標、相機型號、快門次數、鏡頭與軟體標籤。所有分析都在本地完成，安全稽核無需離開裝置。",
+        "highlights": [
+          "在照片上線前先確認經緯度與時間戳",
+          "定位相機序號、鏡頭 ID、韌體版本與編輯痕跡",
+          "輸出可分享的 EXIF 摘要，方便撰寫報告或交付文件"
+        ]
+      },
+      "remover": {
+        "title": "一鍵清除中繼資料",
+        "description": "於記憶體中直接改寫檔案標頭，移除所有 EXIF 欄位且維持畫質。隱私小組、記者與社群管理員都能放心發佈。",
+        "highlights": [
+          "一次性移除 GPS、IPTC、XMP 與廠商自訂欄位",
+          "批次處理活動相簿或交付物，流程保持一致",
+          "保留原始檔，同時輸出已淨化的版本"
+        ]
+      },
+      "automation": {
+        "title": "貼合流程的自動化",
+        "description": "把 EXIF Viewer 當成分發看板：標記風險檔案、加上徽章，並將清理成果直接送到 CMS、DAM 或聊天協作。",
+        "highlights": [
+          "用隱私徽章為法務、行銷或開源團隊標示狀態",
+          "為利害關係人建立即時下載包",
+          "透過專注行動的介面同步審批與交付"
+        ]
+      }
+    },
+    "cta": {
+      "title": "準備好清理下一批照片了嗎？",
+      "description": "開啟 RemovExif、檢查 EXIF，並在一分鐘內分享零外洩的圖像。",
+      "button": "啟動 EXIF 檢視器"
+    }
+  },
+  "HowToUsePage": {
+    "meta": {
+      "title": "如何使用 RemovExif 檢視並清理 EXIF",
+      "description": "依照下列步驟在瀏覽器中上傳、稽核並移除 EXIF 中繼資料。無需安裝或上傳，立即掌控隱私。"
+    },
+    "hero": {
+      "badge": "RemovExif 使用指南",
+      "title": "循序掌握 EXIF 檢視流程",
+      "description": "全程在本地執行，從上傳到清理都留在瀏覽器裡。"
+    },
+    "steps": {
+      "upload": {
+        "title": "1. 上傳或拖曳照片",
+        "description": "把檔案拖進粗獷風的上傳區或點擊瀏覽。RemovExif 支援 JPG、PNG、WebP、GIF、BMP、TIFF、AVIF、HEIC 等格式，適合大量素材。",
+        "metadata": [
+          "提示：依照專案或拍攝任務重新命名批次，方便比對。"
+        ]
+      },
+      "preview": {
+        "title": "2. 預覽 EXIF 資料",
+        "description": "使用檢視抽屜檢查 GPS 座標、時間戳、機身、鏡頭、ISO、光圈與快門，找出仍含敏感欄位的照片。",
+        "metadata": [
+          "提醒：發佈前先確認需要隱藏的座標或設備資訊。"
+        ]
+      },
+      "clean": {
+        "title": "3. 立即清除中繼資料",
+        "description": "點擊「確認並清除 EXIF」，在本地重寫檔案標頭。清理過程不會壓縮影像，也不會離開瀏覽器。",
+        "metadata": [
+          "所有動作都在本地完成，法務與新聞團隊可以安心審核。"
+        ]
+      },
+      "distribute": {
+        "title": "4. 下載並分發",
+        "description": "可個別下載或一次取得 ZIP，不洩漏位置資訊就能把乾淨檔案傳到 CMS、Slack、Discord、郵件或市集平台。",
+        "metadata": [
+          "為檔案加上「已清理」標籤，讓同事快速辨識。"
+        ]
+      }
+    },
+    "checklist": {
+      "title": "發佈前快速檢查",
+      "items": [
+        "再次確認 GPS 座標、時間戳與相機 ID",
+        "確認介面徽章顯示「Safe to Share」",
+        "下載淨化後的壓縮檔並保留原始備份",
+        "把此流程寫進團隊手冊，方便新人上手"
+      ]
+    },
+    "use_cases": {
+      "title": "適用團隊",
+      "items": [
+        "分享幕後花絮的社群經理",
+        "發佈敏感素材的攝影記者",
+        "上架商品照片的賣家",
+        "在 CI/CD 中加入 EXIF 清理步驟的開發者"
+      ]
+    },
+    "cta": {
+      "title": "啟動整個流程",
+      "description": "開啟 RemovExif、拖入素材，幾分鐘內就能得到可分享的安全照片。",
+      "button": "免費體驗 RemovExif"
+    }
+  },
+  "FAQPage": {
+    "meta": {
+      "title": "EXIF 檢視器常見問題 | RemovExif",
+      "description": "透過這些問答了解如何在瀏覽器中檢視、清理與分享照片，維持位置與設備資訊的隱私。"
+    },
+    "hero": {
+      "badge": "常見問題",
+      "title": "EXIF 檢視與清理 Q&A",
+      "description": "蒐集團隊在導入 RemovExif 時最常見的疑問，並會持續補充新的自動化情境。"
+    },
+    "faqs": [
+      {
+        "question": "RemovExif 只是 EXIF 檢視器還是也能清理？",
+        "answer": "兩者都是。你可以先在檢視器中檢查 GPS、相機與時間戳，確認後再在本地清除這些欄位，全程不需上傳。"
+      },
+      {
+        "question": "EXIF 檢視器能離線使用嗎？",
+        "answer": "可以。只要頁面載入完成，後續的預覽與清理都在瀏覽器內進行。記者、NGO 與隱私小組即使在受限網路下也能使用。"
+      },
+      {
+        "question": "可以清理哪些格式？",
+        "answer": "可上傳 JPG、PNG、WebP、GIF、BMP、TIFF、AVIF、HEIC 等格式。工具會自動偵測 EXIF、IPTC、XMP 中繼資料並刪除找到的內容。"
+      },
+      {
+        "question": "移除 EXIF 會影響畫質嗎？",
+        "answer": "不會。RemovExif 只修改中繼資料區段，像素保持不變，因此解析度、色彩與壓縮設定都維持原樣。"
+      },
+      {
+        "question": "能一次處理多張照片嗎？",
+        "answer": "當然可以。拖入整個資料夾或多個檔案，逐一預覽 EXIF 後即可單獨下載或一次打包成 ZIP。"
+      }
+    ],
+    "cta": {
+      "title": "還有 EXIF 相關問題？",
+      "description": "開啟 RemovExif、掃描檔案，看到「Safe to Share」徽章亮起再發佈。",
+      "button": "開始免費的 EXIF 掃描"
+    }
+  }
+}
+
