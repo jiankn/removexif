@@ -6,6 +6,7 @@ import { locales } from "@/i18n";
 import Footer from "@/components/Footer";
 import CookieBanner from "@/components/CookieBanner";
 import AdSenseLoader from "@/components/AdSenseLoader";
+import GoogleAnalytics from "@/components/GoogleAnalytics";
 import "../globals.css";
 
 const inter = Inter({
@@ -59,6 +60,8 @@ export default async function LocaleLayout({
         )}
       </head>
       <body className={`${inter.variable} antialiased bg-slate-50 font-sans flex flex-col min-h-screen`}>
+        {/* Google Analytics - Loads on all pages */}
+        <GoogleAnalytics />
         <NextIntlClientProvider messages={messages}>
           <div className="flex-1">
             {children}
